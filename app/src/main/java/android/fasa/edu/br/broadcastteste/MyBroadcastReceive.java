@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.widget.Toast;
 
 /**
  * Created by pcego on 16/05/18.
@@ -17,6 +18,10 @@ public class MyBroadcastReceive extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+
+        Toast.makeText(context,
+                "Uma Notificação Foi Gerada Através do BroadcastReceiver",
+                Toast.LENGTH_LONG).show();
 
         Intent i = new Intent(context, MainActivity2.class);
 
